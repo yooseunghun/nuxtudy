@@ -12,18 +12,18 @@
 
 
 <!-- 
-// <template>
-//   <div id="app">
-//     {{ message }}
-//   </div>
-// </template> 
-// <script>
-// var app = new Vue({
-//   el : '#app',
-//   data : {
-//     message: 'hello vue!'
-//   }
-//   })
+<template>
+  <div id="app">
+    {{ message }}
+  </div>
+</template> 
+<script>
+var app = new Vue({
+  el : '#app',
+  data : {
+    message: 'hello vue!'
+  }
+  })
 
-// </script> -->
-
+</script>
+-->
