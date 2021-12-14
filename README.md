@@ -1,4 +1,4 @@
-# hello_nuxt
+# nuxtudy
 
 ## Build Setup
 
