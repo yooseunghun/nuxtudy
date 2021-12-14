@@ -15,14 +15,13 @@
             </v-btn>
             <v-btn @click="onclickMoment">
                 moment
-            </v-btn>
-            
+            </v-btn>            
         </v-card-actions>    
         <v-card-actions>
             <v-btn @click="onclickDialog">
                 dialog
             </v-btn>
-            <v-btn @click="onclickDialog">
+            <v-btn @click="onclickNoti">
                 notification
             </v-btn>                    
         </v-card-actions>
@@ -49,20 +48,24 @@ export default {
             this.result = this.$moment().toLocaleString()            
         },
         async onclickDialog () {
-            // const res = await this.$dialog.warning({
-            // text: 'Do you really want to exit?',
-            // title: 'Warning'
-            // })
-
-        this.$dialog.notify.info('Test notification', {
-        position: 'top-right',
-        timeout: 5000
-        })
-
-            //this.result = res
-
-            
+            const res = await this.$dialog.confirm({
+            text: 'Do you really want to exit?',
+            title: 'Warning'
+            })
+        this.result = res
+        },
+        async onclickNoti () {
+            const res = this.$dialog.notify.info('Test notification', {
+                position: 'top-right',
+                timeout: 5000
+            })
+            this.result = res
         }
     }
 }
+
+//            this.$dialog.notify.info('Test notification', {
+        // position: 'top-right',
+        // timeout: 5000
+        // })
 </script>

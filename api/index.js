@@ -11,7 +11,3 @@ module.exports = {
     path: '/api',
     handler: app
 }
-
-// export default (req, res) => {
-//     res.send('hihihihihi')
-// }
